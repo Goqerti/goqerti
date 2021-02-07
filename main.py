@@ -72,7 +72,7 @@ def command_start(update, context: CallbackContext):
         keyboard = [[addme],[kanal,grup]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_video(BDT_VIDEO),
-        update.message.reply_text('Salam Mən *BDTKrasvort* Bot Məni Grupa Qataraq *Söz Oyunu* Oynaya Bilərsiniz\n\n*BDTKrasvort* Əmrlər:\n/game - Yeni Bir Oyun Başladın\n/master - Aparıcı Olmaq\n/top - Reytinq\n\n*Daha ətraflı* /help', reply_to_message_id=True, reply_markup=reply_markup,
+        update.message.reply_text('Salam Mən *BDTKrasvort* Bot Məni Grupa Qataraq *Söz Oyunu* Oynaya Bilərsiniz\n\n*BDTKrasvort* Əmrlər:\n/game - Yeni Bir Oyun Başladın\n/master - Aparıcı Olmaq\n/rating - Reytinq\n\n*Daha ətraflı* /help', reply_to_message_id=True, reply_markup=reply_markup,
             parse_mode=ParseMode.MARKDOWN)
             
     else:
@@ -186,7 +186,7 @@ def command_rating(update, context):
 
     rating_str = game.get_str_rating()
 
-    logger.info('Got command /top,'
+    logger.info('Got command /rating,'
                 'chat_id={},'
                 'rating={}'.format(update.message.chat.id,
                                    rating_str))
@@ -237,7 +237,7 @@ def main():
     dp.add_handler(CommandHandler("master", command_master))
     dp.add_handler(CommandHandler("show_word", command_show_word))
     dp.add_handler(CommandHandler("change_word", command_change_word))
-    dp.add_handler(CommandHandler("top", command_rating))
+    dp.add_handler(CommandHandler("rating", command_rating))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("start", command_start))
 
