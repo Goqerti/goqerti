@@ -9,3 +9,6 @@
 
 [![Şirvan github stats](https://github-readme-stats.vercel.app/api?username=goqerti&show_icons=true&theme=cobalt&count_private=true)](https://github.com/goqerti)
 
+## Alpha User Bot
+[User Bot’um](t.me/alphauserbot)
+
